@@ -41,7 +41,7 @@ SEG_MAX_DET    = 20
 # Debug
 SAVE_OVERLAY = False
 OVERLAY_PATH = "gauge_dial_overlay.jpg"
-SHOW_DEBUG   = True     # True = tampilkan plt
+SHOW_DEBUG   = False     # True = tampilkan plt
 
 # ================== Utils ==================
 def _sigmoid(x): return 1.0 / (1.0 + np.exp(-x))
@@ -384,4 +384,5 @@ if __name__ == "__main__":
         plt.figure(figsize=(6,6))
         plt.imshow(cv2.cvtColor(overlay, cv2.COLOR_BGR2RGB))
         plt.title("Gauge ROI + Segmentation Overlay")
+
         plt.axis('off'); plt.tight_layout(); plt.show()
